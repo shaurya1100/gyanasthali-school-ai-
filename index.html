@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GYANASTHALI AI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body{
+font-family: Arial;
+margin:0;
+background:#f5f8ff;
+}
+
+header{
+background:#0a4cff;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+nav{
+background:white;
+padding:10px;
+text-align:center;
+box-shadow:0px 2px 5px rgba(0,0,0,0.2);
+}
+
+nav a{
+margin:10px;
+text-decoration:none;
+color:#0a4cff;
+font-weight:bold;
+}
+
+.section{
+padding:20px;
+}
+
+.card{
+background:white;
+padding:20px;
+margin:15px;
+border-radius:10px;
+box-shadow:0px 0px 10px rgba(0,0,0,0.1);
+}
+
+button{
+background:#0a4cff;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:5px;
+}
+
+input,select,textarea{
+width:100%;
+padding:10px;
+margin-top:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>GYANASTHALI AI</h1>
+
+<p>Official AI Learning System</p>
+
+<p>Gyansthali Public School</p>
+
+</header>
+
+<nav>
+
+<a href="#about">About</a>
+<a href="#facilities">Facilities</a>
+<a href="#gallery">Gallery</a>
+<a href="#ai">AI Teacher</a>
+<a href="#test">Mock Test</a>
+<a href="#notes">Notes</a>
+
+</nav>
+
+
+<div class="section" id="about">
+
+<div class="card">
+
+<h2>About School</h2>
+
+<p>
+
+Gyansthali Public School is a CBSE affiliated institution focused on quality education and student development.
+
+</p>
+
+<p>
+
+The school provides modern education with moral values and discipline.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="section" id="facilities">
+
+<div class="card">
+
+<h2>Facilities</h2>
+
+<ul>
+
+<li>Smart Classes</li>
+
+<li>Computer Lab</li>
+
+<li>Science Lab</li>
+
+<li>Library</li>
+
+<li>Sports Ground</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+
+<div class="section" id="gallery">
+
+<div class="card">
+
+<h2>Gallery</h2>
+
+<img src="https://www.gyansthalischool.com/images/banner1.jpg" width="100%">
+
+<br><br>
+
+<img src="https://www.gyansthalischool.com/images/banner2.jpg" width="100%">
+
+</div>
+
+</div>
+
+
+
+<div class="section" id="ai">
+
+<div class="card">
+
+<h2>AI Teacher</h2>
+
+<input id="question" placeholder="Ask Question">
+
+<button onclick="answer()">
+
+Ask
+
+</button>
+
+<p id="reply"></p>
+
+</div>
+
+</div>
+
+
+
+<div class="section" id="test">
+
+<div class="card">
+
+<h2>Mock Test Generator</h2>
+
+<select>
+
+<option>Class 6</option>
+
+<option>Class 7</option>
+
+<option>Class 8</option>
+
+</select>
+
+<select>
+
+<option>Science</option>
+
+<option>Math</option>
+
+<option>English</option>
+
+</select>
+
+<button onclick="test()">
+
+Generate Test
+
+</button>
+
+<p id="testdata"></p>
+
+</div>
+
+</div>
+
+
+
+<div class="section" id="notes">
+
+<div class="card">
+
+<h2>Notes Generator</h2>
+
+<input placeholder="Subject">
+
+<input placeholder="Chapter">
+
+<button onclick="notes()">
+
+Generate Notes
+
+</button>
+
+<p id="notesdata"></p>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+function answer(){
+
+let q=document.getElementById("question").value;
+
+document.getElementById("reply").innerHTML=
+
+"Step 1: Understand the concept<br>"+
+"Step 2: Study examples<br>"+
+"Step 3: Practice questions<br><br>"+
+
+"Example Explanation for:<br>"+q;
+
+}
+
+
+function test(){
+
+document.getElementById("testdata").innerHTML=
+
+"1 What is energy?<br>"+
+"2 Define force<br>"+
+"3 What is plant cell?<br>"+
+"4 What is gravity?<br>";
+
+}
+
+
+function notes(){
+
+document.getElementById("notesdata").innerHTML=
+
+"Chapter Notes:<br>"+
+"Definition<br>"+
+"Formulas<br>"+
+"Examples";
+
+}
+
+
+</script>
+
+
+</body>
+
+  </html>
