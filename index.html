@@ -1,62 +1,92 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
 <title>GYANASTHALI AI</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 
 body{
-font-family: Arial;
 margin:0;
-background:#f5f8ff;
+font-family:Arial;
+background:#eef3ff;
 }
 
 header{
-background:#0a4cff;
+background:#0044cc;
 color:white;
+padding:25px;
+text-align:center;
+}
+
+.hero{
+
 padding:20px;
 text-align:center;
+background:white;
+
+}
+
+.hero img{
+
+width:100%;
+border-radius:10px;
+
 }
 
 nav{
+
 background:white;
-padding:10px;
+padding:15px;
 text-align:center;
-box-shadow:0px 2px 5px rgba(0,0,0,0.2);
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+
 }
 
 nav a{
-margin:10px;
+
+margin:15px;
 text-decoration:none;
-color:#0a4cff;
+color:#0044cc;
 font-weight:bold;
+
 }
 
 .section{
+
 padding:20px;
+
 }
 
 .card{
+
 background:white;
-padding:20px;
 margin:15px;
+padding:20px;
 border-radius:10px;
 box-shadow:0px 0px 10px rgba(0,0,0,0.1);
+
 }
 
 button{
-background:#0a4cff;
+
+background:#0044cc;
 color:white;
 border:none;
-padding:10px 20px;
-border-radius:5px;
+padding:12px 25px;
+border-radius:6px;
+
 }
 
-input,select,textarea{
+input,select{
+
 width:100%;
 padding:10px;
 margin-top:10px;
+
 }
 
 </style>
@@ -64,6 +94,7 @@ margin-top:10px;
 </head>
 
 <body>
+
 
 <header>
 
@@ -75,39 +106,56 @@ margin-top:10px;
 
 </header>
 
+
+
+<div class="hero">
+
+<img src="https://www.gyansthalischool.com/images/banner1.jpg">
+
+</div>
+
+
+
 <nav>
 
 <a href="#about">About</a>
+
 <a href="#facilities">Facilities</a>
+
 <a href="#gallery">Gallery</a>
+
 <a href="#ai">AI Teacher</a>
+
 <a href="#test">Mock Test</a>
+
 <a href="#notes">Notes</a>
 
 </nav>
+
 
 
 <div class="section" id="about">
 
 <div class="card">
 
-<h2>About School</h2>
+<h2>About Gyansthali Public School</h2>
 
 <p>
 
-Gyansthali Public School is a CBSE affiliated institution focused on quality education and student development.
+Gyansthali Public School is a CBSE affiliated institution dedicated to academic excellence and character development.
 
 </p>
 
 <p>
 
-The school provides modern education with moral values and discipline.
+The school focuses on modern education along with discipline and moral values.
 
 </p>
 
 </div>
 
 </div>
+
 
 
 <div class="section" id="facilities">
@@ -120,13 +168,13 @@ The school provides modern education with moral values and discipline.
 
 <li>Smart Classes</li>
 
-<li>Computer Lab</li>
+<li>Science Laboratory</li>
 
-<li>Science Lab</li>
+<li>Computer Lab</li>
 
 <li>Library</li>
 
-<li>Sports Ground</li>
+<li>Sports Facilities</li>
 
 </ul>
 
@@ -140,7 +188,7 @@ The school provides modern education with moral values and discipline.
 
 <div class="card">
 
-<h2>Gallery</h2>
+<h2>School Gallery</h2>
 
 <img src="https://www.gyansthalischool.com/images/banner1.jpg" width="100%">
 
@@ -160,15 +208,15 @@ The school provides modern education with moral values and discipline.
 
 <h2>AI Teacher</h2>
 
-<input id="question" placeholder="Ask Question">
+<input id="q" placeholder="Ask your question">
 
-<button onclick="answer()">
+<button onclick="teach()">
 
-Ask
+Ask AI
 
 </button>
 
-<p id="reply"></p>
+<p id="ans"></p>
 
 </div>
 
@@ -242,17 +290,29 @@ Generate Notes
 
 <script>
 
-function answer(){
+function teach(){
 
-let q=document.getElementById("question").value;
+let q=document.getElementById("q").value;
 
-document.getElementById("reply").innerHTML=
+document.getElementById("ans").innerHTML=
 
-"Step 1: Understand the concept<br>"+
-"Step 2: Study examples<br>"+
+"<b>Explanation:</b><br>"+
+
+"Step 1: Understand the topic<br>"+
+
+"Step 2: Learn examples<br>"+
+
 "Step 3: Practice questions<br><br>"+
 
-"Example Explanation for:<br>"+q;
+"<b>Your Question:</b><br>"+q+
+
+"<br><br>"+
+
+"<b>Practice Questions:</b><br>"+
+
+"1 Explain the topic<br>"+
+
+"2 Give example";
 
 }
 
@@ -261,10 +321,13 @@ function test(){
 
 document.getElementById("testdata").innerHTML=
 
-"1 What is energy?<br>"+
-"2 Define force<br>"+
-"3 What is plant cell?<br>"+
-"4 What is gravity?<br>";
+"1 Define energy<br>"+
+
+"2 What is force?<br>"+
+
+"3 What is gravity?<br>"+
+
+"4 What is atom?<br>";
 
 }
 
@@ -273,9 +336,12 @@ function notes(){
 
 document.getElementById("notesdata").innerHTML=
 
-"Chapter Notes:<br>"+
-"Definition<br>"+
-"Formulas<br>"+
+"Notes:<br>"+
+
+"Definitions<br>"+
+
+"Important points<br>"+
+
 "Examples";
 
 }
@@ -286,4 +352,4 @@ document.getElementById("notesdata").innerHTML=
 
 </body>
 
-  </html>
+</html>
